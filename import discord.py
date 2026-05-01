@@ -8,7 +8,7 @@ import os
 import random
 
 # === ТОКЕН ===
-TOKEN = "MTQ5OTQxMzU2ODkwOTc0MjI1MQ.GJ7LA2.XK1qCwWNaBMcsXzwkYOlX1ZF9IYtAsISuumptk"
+TOKEN = ""
 PREFIX = "!"
 
 logging.basicConfig(level=logging.INFO)
