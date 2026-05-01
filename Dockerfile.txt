@@ -1,0 +1,15 @@
+FROM python:3.11-slim
+
+# Устанавливаем FFmpeg и зависимости
+RUN apt-get update && apt-get install -y ffmpeg && rm -rf /var/lib/apt/lists/*
+
+# Устанавливаем Python-библиотеки
+RUN pip install --no-cache-dir discord.py[voice] yt-dlp PyNaCl python-dotenv
+
+# Копируем бота
+WORKDIR /app
+COPY BOT.PY /app/
+COPY cookies.txt /app/  # если есть
+
+# Запускаем
+CMD ["python", "BOT.PY"]
